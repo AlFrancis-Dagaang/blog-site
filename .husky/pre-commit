@@ -1,0 +1,2 @@
+pnpm check:fix
+git add -A
