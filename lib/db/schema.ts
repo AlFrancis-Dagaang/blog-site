@@ -25,3 +25,6 @@ export const postsRelations = relations(posts, ({ many }) => ({
 export const commentsRelations = relations(comments, ({ one }) => ({
   post: one(posts, { fields: [comments.postId], references: [posts.id] }),
 }));
+
+export type Post = typeof posts.$inferSelect;
+export type Comment = typeof comments.$inferSelect;
