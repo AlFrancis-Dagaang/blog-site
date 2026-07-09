@@ -12,7 +12,8 @@
     "format": "biome format --write",
     "typecheck": "tsc --noEmit",
     "prepare": "husky",
-    "db:seed": "tsx --env-file=.env.local scripts/seed.ts"
+    "db:seed": "tsx --env-file=.env.local scripts/seed.ts",
+    "db:test": "tsx --env-file=.env.local scripts/test-queries.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
