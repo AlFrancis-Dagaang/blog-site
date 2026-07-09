@@ -5,6 +5,9 @@ export const posts = pgTable("posts", {
   id: uuid("id").primaryKey().defaultRandom(),
   title: text("title").notNull(),
   slug: text("slug").notNull().unique(),
+  excerpt: text("excerpt").notNull(),
+  category: text("category").notNull(),
+  coverImage: text("cover_image").notNull(),
   body: text("body").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });

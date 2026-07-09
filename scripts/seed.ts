@@ -8,6 +8,10 @@ async function seed() {
     {
       title: "Welcome to My Blog",
       slug: "welcome-to-my-blog",
+      excerpt:
+        "An introduction to who I am and what you can expect to find on this blog.",
+      category: "Community",
+      coverImage: "/images/posts/welcome-to-my-blog.jpg",
       body: `
 Welcome to my personal blog!
 
@@ -21,6 +25,10 @@ This website itself is built with Next.js, Drizzle ORM, Neon PostgreSQL, and Typ
     {
       title: "How I Earned My AWS Certified Cloud Practitioner",
       slug: "how-i-earned-my-aws-certified-cloud-practitioner",
+      excerpt:
+        "My study approach, resources, and lessons learned while preparing for the AWS Certified Cloud Practitioner exam.",
+      category: "Certifications",
+      coverImage: "/images/posts/aws-cloud-practitioner.jpg",
       body: `
 Passing the AWS Certified Cloud Practitioner exam was one of my biggest milestones.
 
@@ -34,6 +42,10 @@ After weeks of preparation, I successfully passed the certification exam. The ex
     {
       title: "Our Hackathon Journey: Reaching the Top 5",
       slug: "our-hackathon-journey-top-5",
+      excerpt:
+        "How our team went from a blank idea to a Top 5 finish, and what the experience taught me about teamwork under pressure.",
+      category: "Projects",
+      coverImage: "/images/posts/hackathon-top-5.jpg",
       body: `
 Joining our hackathon was both exciting and challenging.
 
@@ -48,6 +60,10 @@ More than the ranking itself, the experience taught me valuable lessons about te
       title:
         "Everything Is an Object: A Beginner's Guide to Object-Oriented Programming",
       slug: "everything-is-an-object",
+      excerpt:
+        "A beginner-friendly explanation of how thinking in objects makes complex software easier to design and maintain.",
+      category: "Learning",
+      coverImage: "/images/posts/everything-is-an-object.jpg",
       body: `
 When I first started programming, I thought variables and functions were completely separate concepts. Learning Object-Oriented Programming changed the way I viewed software.
 
