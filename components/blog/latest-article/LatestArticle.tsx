@@ -22,7 +22,7 @@ interface LatestArticleProps {
 export function LatestArticle({ post }: LatestArticleProps) {
   if (!post) {
     return (
-      <section className="py-16 md:py-24 bg-transparent">
+      <section className="py-16 md:pt-24 md:pb-12 bg-transparent">
         <Container>
           {/* Header Section remains so the page structure isn't lost */}
           <div className="mb-12 border-b-2 border-black dark:border-white pb-4">
@@ -49,7 +49,7 @@ export function LatestArticle({ post }: LatestArticleProps) {
   const formattedDate = formatDateToPHT(post.createdAt);
 
   return (
-    <section className="py-16 md:py-24 bg-transparent">
+    <section className="py-16 md:pt-24 md:pb-12 bg-transparent">
       <Container>
         {/* 1. Header Section with Bottom Border */}
         <div className="mb-12 border-b-2 border-black dark:border-white pb-4">

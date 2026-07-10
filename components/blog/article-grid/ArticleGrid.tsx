@@ -19,7 +19,7 @@ interface ArticleGridProps {
 
 export function ArticleGrid({ posts, currentCategory }: ArticleGridProps) {
   return (
-    <section className="pt-16 pb-24 bg-transparent">
+    <section className="pt-12 pb-24 bg-transparent">
       <Container>
         {/* Header Area */}
         <div className="mb-8">

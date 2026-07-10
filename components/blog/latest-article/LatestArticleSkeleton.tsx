@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/Container";
 
 export function LatestArticleSkeleton() {
   return (
-    <section className="py-16 md:py-24 bg-transparent">
+    <section className="py-16 md:pt-24  md:pb-12 bg-transparent">
       <Container>
         {/* 1. Static Header - Matches the loaded state to prevent layout shift */}
         <div className="mb-12 border-b-2 border-black dark:border-white pb-4">
