@@ -23,7 +23,7 @@ export function FeaturedCarousel({ title, posts }: FeaturedCarouselProps) {
     }
   };
 
-  if (!posts || posts.length === 0) return null;
+  if (!posts || posts.length < 0) return null;
 
   return (
     <section className="py-12 bg-transparent">
