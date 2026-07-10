@@ -20,7 +20,6 @@ interface LatestArticleProps {
 }
 
 export function LatestArticle({ post }: LatestArticleProps) {
-  // Empty State: If there are no posts in the database
   if (!post) {
     return (
       <section className="py-16 md:py-24 bg-transparent">
@@ -28,12 +27,12 @@ export function LatestArticle({ post }: LatestArticleProps) {
           {/* Header Section remains so the page structure isn't lost */}
           <div className="mb-12 border-b-2 border-black dark:border-white pb-4">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-text">
-              My <span className="text-brand">Blogs</span>
+              A3<span className="text-brand">Blogs</span>
             </h2>
           </div>
 
           {/* Empty State UI */}
-          <div className="flex flex-col items-center justify-center py-20 text-center border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-2xl bg-gray-50/50 dark:bg-gray-800/20">
+          <div className="flex flex-col items-center justify-center py-20 text-center bg-gray-50/50 dark:bg-gray-800/20">
             <h3 className="text-xl md:text-2xl font-bold text-primary-text mb-2">
               No latest Article
             </h3>
@@ -55,7 +54,7 @@ export function LatestArticle({ post }: LatestArticleProps) {
         {/* 1. Header Section with Bottom Border */}
         <div className="mb-12 border-b-2 border-black dark:border-white pb-4">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-text">
-            My <span className="text-brand">Blogs</span>
+            A3 <span className="text-brand">Blogs</span>
           </h2>
         </div>
 

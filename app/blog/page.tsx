@@ -1,20 +1,20 @@
-import { Suspense } from "react";
-import { LatestArticle } from "@/components/blog/LatestArticle";
-import { getLatestPost } from "@/lib/queries/posts";
-
-async function LatestArticleSection() {
-  const latestPost = await getLatestPost();
-  return <LatestArticle post={latestPost} />;
-}
-
-export default function BlogPage() {
+import { ArticleGridSection } from "@/components/blog/article-grid/ArticleGridSection";
+import {
+  AwsCarouselSection,
+  ProjectsCarouselSection,
+} from "@/components/blog/featured-carousel/FeaturedCarouselSection";
+import { LatestArticleSection } from "@/components/blog/latest-article/LatestArticleSection";
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
   return (
     <main>
-      <Suspense
-        fallback={<div className="animate-pulse h-96 bg-skeleton rounded-lg" />}
-      >
-        <LatestArticleSection />
-      </Suspense>
+      <LatestArticleSection />
+      <AwsCarouselSection />
+      <ProjectsCarouselSection />
+      <ArticleGridSection searchParams={searchParams} />
     </main>
   );
 }
