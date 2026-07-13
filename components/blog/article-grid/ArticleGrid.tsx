@@ -65,7 +65,7 @@ export function ArticleGrid({ posts, currentCategory }: ArticleGridProps) {
           {posts.length > 0 ? (
             posts.map((post) => <ArticleGridCard key={post.id} post={post} />)
           ) : (
-            <div className="py-20 text-center  bg-gray-50/50 dark:bg-gray-800/20">
+            <div className="py-20 text-center ">
               <h3 className="text-xl font-bold text-primary-text mb-2">
                 No articles found
               </h3>
