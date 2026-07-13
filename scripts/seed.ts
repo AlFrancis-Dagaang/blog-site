@@ -21,6 +21,7 @@ This blog is where I'll share my learning journey, project experiences, and less
 
 This website itself is built with Next.js, Drizzle ORM, Neon PostgreSQL, and TypeScript. I hope you'll find something useful here.
       `,
+      createdAt: new Date("2026-06-15T09:00:00Z"),
     },
     {
       title: "How I Earned My AWS Certified Cloud Practitioner",
@@ -38,6 +39,7 @@ To prepare, I watched video courses, completed hands-on labs, read AWS documenta
 
 After weeks of preparation, I successfully passed the certification exam. The experience gave me confidence in cloud computing and motivated me to continue learning more advanced AWS services.
       `,
+      createdAt: new Date("2026-06-22T14:30:00Z"),
     },
     {
       title: "Our Hackathon Journey: Reaching the Top 5",
@@ -55,6 +57,7 @@ Although the competition was tough, our hard work paid off—we finished as one 
 
 More than the ranking itself, the experience taught me valuable lessons about teamwork, communication, problem-solving, and building software under pressure. It remains one of the most memorable experiences in my journey as a developer.
       `,
+      createdAt: new Date("2026-07-01T11:15:00Z"),
     },
     {
       title:
@@ -73,6 +76,7 @@ Thinking in objects makes complex applications easier to organize because each o
 
 Whether you're building a blog, an e-commerce website, or a game, object-oriented thinking helps create code that is easier to understand, maintain, and extend as your projects grow.
       `,
+      createdAt: new Date("2026-07-08T16:45:00Z"),
     },
   ];
 
