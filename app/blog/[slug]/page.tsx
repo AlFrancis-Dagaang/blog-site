@@ -1,28 +1,23 @@
-import { notFound } from "next/navigation";
-import { ArticleContent } from "@/components/article/article-content";
-import { ArticleHeader } from "@/components/article/article-header";
+import { ArticleSection } from "@/components/article/ArticleSection";
+import { CommentListSection } from "@/components/comment/CommentListSection";
 import { Container } from "@/components/layout/Container";
-import { getPostBySlug } from "@/lib/queries/posts";
+import { getAllPosts } from "@/lib/queries/posts";
 
-type SingleArticlePageProps = {
-  params: Promise<{ slug: string }>;
-};
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({ slug: post.slug }));
+}
 
-export default async function SingleArticlePage({
+export default function SingleArticlePage({
   params,
-}: SingleArticlePageProps) {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
-
-  if (!post) {
-    notFound();
-  }
-
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   return (
     <main className="bg-transparent">
-      <Container>
-        <ArticleHeader post={post} />
-        <ArticleContent post={post} />
+      <Container maxWidth="max-w-4xl">
+        <ArticleSection paramsPromise={params} />
+        <CommentListSection paramsPromise={params} />
       </Container>
     </main>
   );
