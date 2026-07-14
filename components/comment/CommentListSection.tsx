@@ -28,9 +28,9 @@ async function CommentsDataFetcher({ paramsPromise }: CommentListSectionProps) {
   ]);
 
   return (
-    <section className="py-12 border-t border-black dark:border-white">
-      <h3 className="text-2xl text-primary-text mb-6">
-        Responses (<span className="text-[#ff7a59]">{totalComments}</span>)
+    <section className="py-12 border-t-2 border-black dark:border-white">
+      <h3 className="text-xl text-primary-text mb-6">
+        Comments (<span className="text-[#ff7a59]">{totalComments}</span>)
       </h3>
 
       <CommentForm postId={post.id} slug={slug} />

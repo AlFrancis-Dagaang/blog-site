@@ -7,7 +7,7 @@ interface ArticleContentProps {
 
 export function ArticleContent({ post }: ArticleContentProps) {
   return (
-    <article className="pb-16 md:pb-24">
+    <article className="pb-8 md:pb-16">
       {/* Cover Image */}
       <div className="relative w-full aspect-video md:aspect-2/1 overflow-hidden rounded-2xl mb-10 shadow-md">
         <Image

@@ -39,7 +39,7 @@ export function CommentDrawer({ postId, totalComments }: CommentDrawerProps) {
         onClick={() => setIsOpen(true)}
         className="mt-8 px-5 py-1.5 border border-[#ff7a59] text-[#ff7a59] text-sm font-medium rounded-full hover:bg-[#ff7a59]/10 transition-colors"
       >
-        See all Response
+        See all Comments
       </button>
 
       {/* Native Dialog Drawer */}
@@ -59,7 +59,7 @@ export function CommentDrawer({ postId, totalComments }: CommentDrawerProps) {
             {/* UPDATED: dark:border-[var(--color-border-light)] applies your #0a3a4a color */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-(--color-border-light)">
               <h3 className="text-xl font-bold text-primary-text">
-                All Responses
+                All Comments
               </h3>
               {/** biome-ignore lint/a11y/useButtonType: <> */}
               <button

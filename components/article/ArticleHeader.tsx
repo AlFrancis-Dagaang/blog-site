@@ -1,7 +1,7 @@
 import Link from "next/dist/client/link";
+import { SITE_AUTHOR } from "@/lib/constants";
 import { formatDateToPHT } from "@/lib/Utils";
 
-// Shared interface for the post based on your Drizzle schema
 export interface ArticlePost {
   id: string;
   title: string;
@@ -60,8 +60,7 @@ export function ArticleHeader({ post }: ArticleHeaderProps) {
 
       {/* Author, Date, and Divider */}
       <div className="text-sm md:text-base text-primary-text dark:text-gray-200 font-medium pb-4 border-b-2 border-black dark:border-white">
-        Al Francis Daga-ang <span className="mx-2 font-bold">•</span>{" "}
-        {formattedDate}
+        {SITE_AUTHOR} <span className="mx-2 font-bold">•</span> {formattedDate}
       </div>
     </header>
   );

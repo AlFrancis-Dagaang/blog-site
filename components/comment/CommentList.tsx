@@ -32,7 +32,7 @@ export function CommentList({ comments }: CommentListProps) {
       {comments.map((comment) => (
         <div
           key={comment.id}
-          className="pb-6 border-b border-gray-200 dark:border-gray-800 last:border-0"
+          className="pb-6 border-b border-gray-300 dark:border-gray-700 last:border-0"
         >
           <div className="flex flex-col space-y-1 mb-3">
             <span className="font-medium text-primary-text text-sm">
