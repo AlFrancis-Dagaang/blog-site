@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { db } from "@/lib/db";
 import { comments } from "@/lib/db/schema";
+import { getCommentsByPostId } from "@/lib/queries/comments";
 import { commentSchema } from "@/lib/validation/comments";
 
 type ActionState =
@@ -50,4 +51,8 @@ export async function addComment(
   revalidatePath(`/blog/${slug}`);
 
   return { status: "success" };
+}
+
+export async function getAllCommentsForPost(postId: string) {
+  return getCommentsByPostId(postId); // no limit — full list
 }
