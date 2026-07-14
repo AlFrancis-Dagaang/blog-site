@@ -1,4 +1,5 @@
 import { ArticleSection } from "@/components/article/ArticleSection";
+import { RecommendationSection } from "@/components/article/RecommendationSection";
 import { CommentListSection } from "@/components/comment/CommentListSection";
 import { Container } from "@/components/layout/Container";
 import { getAllPosts } from "@/lib/queries/posts";
@@ -18,6 +19,7 @@ export default function SingleArticlePage({
       <Container maxWidth="max-w-4xl">
         <ArticleSection paramsPromise={params} />
         <CommentListSection paramsPromise={params} />
+        <RecommendationSection paramsPromise={params} />
       </Container>
     </main>
   );
