@@ -54,5 +54,5 @@ export async function addComment(
 }
 
 export async function getAllCommentsForPost(postId: string) {
-  return getCommentsByPostId(postId); // no limit — full list
+  return getCommentsByPostId(postId);
 }
