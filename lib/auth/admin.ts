@@ -1,6 +1,6 @@
 "use server";
 
-import { timingSafeEqual } from "crypto";
+import { timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 
 const COOKIE_NAME = "admin_session";
