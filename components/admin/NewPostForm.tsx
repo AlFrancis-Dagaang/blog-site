@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useRef, useState } from "react";
 import { Container } from "@/components/layout/Container";
 import { useTheme } from "@/components/ui/theme";
-import { type ActionState, createPost } from "@/lib/actions/posts";
+import { createPost } from "@/lib/actions/posts";
 import { logoutAdmin } from "@/lib/auth/admin";
 
 const CATEGORIES = [
