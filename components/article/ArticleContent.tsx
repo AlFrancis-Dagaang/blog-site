@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getStorageUrl } from "@/lib/storage";
 import type { ArticlePost } from "./ArticleHeader";
 
 interface ArticleContentProps {
@@ -11,7 +12,7 @@ export function ArticleContent({ post }: ArticleContentProps) {
       {/* Cover Image */}
       <div className="relative w-full aspect-video md:aspect-2/1 overflow-hidden rounded-2xl mb-10 shadow-md">
         <Image
-          src={post.coverImage}
+          src={getStorageUrl(post.coverImage)}
           alt={post.title}
           fill
           priority // Loads this image immediately since it's above the fold

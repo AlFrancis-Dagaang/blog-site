@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getStorageUrl } from "@/lib/storage";
 import { formatDateToPHT } from "@/lib/Utils"; // Adjust path as needed
-
 export interface ArticlePost {
   id: string;
   title: string;
@@ -46,7 +46,7 @@ export function ArticleGridCard({ post }: ArticleGridCardProps) {
       {/* Right Side: Image */}
       <div className="relative w-full md:w-80 lg:w-100 aspect-3/2 shrink-0 overflow-hidden rounded-xl shadow-sm order-1 md:order-2">
         <Image
-          src={post.coverImage}
+          src={getStorageUrl(post.coverImage)}
           alt={post.title}
           fill
           sizes="(max-width: 768px) 100vw, 400px"
