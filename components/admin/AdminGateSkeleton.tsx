@@ -40,10 +40,10 @@ export function AdminGateSkeleton() {
           <div className="h-8 w-40 bg-gray-200 dark:bg-gray-700 rounded mb-2" />
 
           {/* Input Placeholder */}
-          <div className="h-[46px] w-full bg-gray-200 dark:bg-gray-700 rounded-md" />
+          <div className="h-11.5 w-full bg-gray-200 dark:bg-gray-700 rounded-md" />
 
           {/* Button Placeholder */}
-          <div className="mt-2 h-[44px] w-full bg-gray-200 dark:bg-gray-700 rounded-md" />
+          <div className="mt-2 h-11 w-full bg-gray-200 dark:bg-gray-700 rounded-md" />
         </div>
       </div>
     </div>
