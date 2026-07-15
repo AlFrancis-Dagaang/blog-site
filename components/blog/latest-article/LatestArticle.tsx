@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { getStorageUrl } from "@/lib/storage";
 import { formatDateToPHT } from "@/lib/Utils";
 
 // Define the shape of the post based on your Drizzle schema
@@ -68,7 +69,7 @@ export function LatestArticle({ post }: LatestArticleProps) {
           {/* Left Side: Cover Image */}
           <div className="relative w-full aspect-video overflow-hidden rounded-2xl shadow-md">
             <Image
-              src={post.coverImage}
+              src={getStorageUrl(post.coverImage)}
               alt={post.title}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

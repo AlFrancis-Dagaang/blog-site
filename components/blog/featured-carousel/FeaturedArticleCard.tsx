@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getStorageUrl } from "@/lib/storage/url";
 import { formatDateToPHT } from "@/lib/Utils";
-
 export interface FeaturedPost {
   id: string;
   title: string;
@@ -24,7 +24,7 @@ export function FeaturedArticleCard({ post }: FeaturedArticleCardProps) {
       {/* Image */}
       <div className="relative w-full aspect-3/2 overflow-hidden rounded-2xl mb-4">
         <Image
-          src={post.coverImage}
+          src={getStorageUrl(post.coverImage)}
           alt={post.title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
