@@ -1,4 +1,4 @@
-import { readFileSync } from "fs";
+import { readFileSync } from "node:fs";
 import { uploadFile } from "../lib/storage";
 import { buildCoverImageKey } from "../lib/storage/keys";
 
