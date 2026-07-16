@@ -3,28 +3,28 @@ import { getPostsByCategories } from "@/lib/queries/posts"; // Adjust path as ne
 import { FeaturedCarousel } from "./FeaturedCarousel";
 import { FeaturedCarouselSkeleton } from "./FeaturedCarouselSkeleton";
 
-async function AwsCarouselFetcher() {
-  const posts = await getPostsByCategories(["AWS Guides"]);
-  return <FeaturedCarousel title="AWS Guides" posts={posts} />;
+async function FirstCarouselFetcher() {
+  const posts = await getPostsByCategories(["Career"]);
+  return <FeaturedCarousel title="Career" posts={posts} />;
 }
 
-async function ProjectsCarouselFetcher() {
-  const posts = await getPostsByCategories(["Projects"]);
-  return <FeaturedCarousel title="Projects" posts={posts} />;
+async function SecondCarouselFetcher() {
+  const posts = await getPostsByCategories(["Community"]);
+  return <FeaturedCarousel title="Community" posts={posts} />;
 }
 
-export function AwsCarouselSection() {
+export function FirstCarouselSection() {
   return (
-    <Suspense fallback={<FeaturedCarouselSkeleton title="AWS Guides" />}>
-      <AwsCarouselFetcher />
+    <Suspense fallback={<FeaturedCarouselSkeleton title="Career" />}>
+      <FirstCarouselFetcher />
     </Suspense>
   );
 }
 
-export function ProjectsCarouselSection() {
+export function SecondCarouselSection() {
   return (
-    <Suspense fallback={<FeaturedCarouselSkeleton title="Projects" />}>
-      <ProjectsCarouselFetcher />
+    <Suspense fallback={<FeaturedCarouselSkeleton title="Community" />}>
+      <SecondCarouselFetcher />
     </Suspense>
   );
 }

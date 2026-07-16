@@ -1,4 +1,4 @@
-import { and, desc, eq, inArray, ne, notInArray } from "drizzle-orm";
+import { desc, eq, inArray, ne, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import type { Post } from "@/lib/db/schema";
 import { posts } from "@/lib/db/schema";
@@ -47,34 +47,11 @@ export async function getPostsByCategories(
     .orderBy(desc(posts.createdAt));
 }
 
-export async function getRecommendedPosts(
-  currentSlug: string,
-  category: string,
-  limit = 3,
-) {
-  const sameCategory = await db
+export async function getRecommendedPosts(currentSlug: string, limit = 3) {
+  return db
     .select()
     .from(posts)
-    .where(and(eq(posts.category, category), ne(posts.slug, currentSlug)))
-    .orderBy(desc(posts.createdAt))
+    .where(ne(posts.slug, currentSlug))
+    .orderBy(sql`random()`)
     .limit(limit);
-
-  if (sameCategory.length >= limit) {
-    return { posts: sameCategory, hasSameCategory: true };
-  }
-
-  if (sameCategory.length === 0) {
-    return { posts: [], hasSameCategory: false };
-  }
-
-  const excludedSlugs = [currentSlug, ...sameCategory.map((p) => p.slug)];
-
-  const fallback = await db
-    .select()
-    .from(posts)
-    .where(notInArray(posts.slug, excludedSlugs))
-    .orderBy(desc(posts.createdAt))
-    .limit(limit - sameCategory.length);
-
-  return { posts: [...sameCategory, ...fallback], hasSameCategory: true };
 }

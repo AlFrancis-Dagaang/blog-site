@@ -1,8 +1,8 @@
 import type { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
 import { ArticleGridSection } from "@/components/blog/article-grid/ArticleGridSection";
 import {
-  AwsCarouselSection,
-  ProjectsCarouselSection,
+  FirstCarouselSection,
+  SecondCarouselSection,
 } from "@/components/blog/featured-carousel/FeaturedCarouselSection";
 import { LatestArticleSection } from "@/components/blog/latest-article/LatestArticleSection";
 
@@ -25,8 +25,8 @@ export default async function BlogPage({
   return (
     <main>
       <LatestArticleSection />
-      <AwsCarouselSection />
-      <ProjectsCarouselSection />
+      <FirstCarouselSection />
+      <SecondCarouselSection />
       <ArticleGridSection searchParams={searchParams} />
     </main>
   );
