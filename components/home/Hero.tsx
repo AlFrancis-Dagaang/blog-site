@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="py-16 md:py-24 border-b-3 border-black dark:border-white">
+    <section className="py-16 md:py-24 border-b-3 border-black/50 dark:border-white">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Heading */}
         <div className="flex flex-col">
-          <h1 className="text-6xl md:text-8xl font-extrabold text-gray-900 dark:text-white leading-tight">
+          <h1 className="text-6xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
             Al's
             <span className="block text-[#ff7a59]">AWS</span>
             Archive

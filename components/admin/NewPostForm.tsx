@@ -387,7 +387,7 @@ export function NewPostForm() {
               target.style.height = "auto";
               target.style.height = `${target.scrollHeight}px`;
             }}
-            className="w-full bg-transparent text-4xl md:text-5xl font-extrabold text-primary-text placeholder:text-black dark:placeholder:text-white focus:outline-none resize-none overflow-hidden leading-tight py-2"
+            className="w-full bg-transparent text-4xl md:text-5xl font-extrabold text-primary-text placeholder:text-gray-500 dark:placeholder:text-gray-300 focus:outline-none resize-none overflow-hidden leading-tight py-2"
           />
           {state.status === "error" && state.errors?.title && (
             <span className="text-red-500 text-sm mt-2">
