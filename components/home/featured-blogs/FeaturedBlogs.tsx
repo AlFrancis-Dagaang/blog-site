@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getStorageUrl } from "@/lib/storage";
 import { formatDateToPHT } from "@/lib/Utils";
 
+// biome-ignore lint/suspicious/noExplicitAny: <>
 export function FeaturedBlogs({ posts }: { posts: any[] }) {
   const [mainPost, ...sidePosts] = posts;
 
