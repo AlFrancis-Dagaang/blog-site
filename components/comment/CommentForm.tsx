@@ -66,7 +66,6 @@ export function CommentForm({ postId, slug }: CommentFormProps) {
               type="text"
               name="authorName"
               placeholder="Your Name"
-              required
               className="w-full bg-transparent text-sm text-primary-text focus:outline-none placeholder:text-gray-400"
             />
             {state.status === "error" && state.errors?.authorName && (
@@ -82,7 +81,6 @@ export function CommentForm({ postId, slug }: CommentFormProps) {
           <textarea
             name="body"
             placeholder="What are your thoughts ?"
-            required
             rows={3}
             className="w-full bg-transparent text-sm text-primary-text focus:outline-none placeholder:text-gray-400 resize-none min-h-20"
           />
