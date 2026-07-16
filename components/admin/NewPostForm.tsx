@@ -83,7 +83,7 @@ export function NewPostForm() {
     <form
       ref={formRef}
       action={formAction}
-      className="min-h-screen bg-[#f4f4f5] dark:bg-surface flex flex-col font-sans"
+      className="min-h-screen flex flex-col font-sans"
     >
       {/* Admin Navbar */}
       <nav className="sticky top-0 z-50 w-full bg-white/80 dark:bg-[#00212e]/80 backdrop-blur-md border-b border-border-light shadow-sm">
