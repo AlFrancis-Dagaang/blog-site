@@ -61,10 +61,10 @@ export function AdminLoginForm() {
           </h1>
           <p className="text-base font-medium mb-6 max-w-xs leading-snug">
             My personal digital logbook documenting my step-by-step journey
-            through cloud architecture
+            through cloud and software development.
           </p>
           <a
-            href="/"
+            href="/blog"
             className="text-sm font-semibold hover:underline flex items-center"
           >
             Explore the stories{" "}
@@ -74,10 +74,6 @@ export function AdminLoginForm() {
           </a>
         </div>
       </div>
-
-      {/* Vertical Divider (Hidden on mobile) */}
-      <div className="hidden md:block w-0.5 bg-black dark:bg-white h-72 rounded-full opacity-90" />
-
       {/* Right Side - Form */}
       <div className="w-full md:w-1/2 max-w-sm flex flex-col justify-center">
         {/* Info Notice Box */}

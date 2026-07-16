@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import { About } from "@/components/home/About";
+import { FeaturedBlogsSection } from "@/components/home/featured-blogs/FeaturedBlogSection";
+import { Hero } from "@/components/home/Hero";
+import { Container } from "@/components/layout/Container";
 
 export const metadata: Metadata = {
   title: "A3 Blog",
@@ -12,5 +16,11 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  return <div className="w-full bg-transparent"></div>;
+  return (
+    <Container>
+      <Hero />
+      <FeaturedBlogsSection />
+      <About />
+    </Container>
+  );
 }
