@@ -1,4 +1,6 @@
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { getStorageUrl } from "@/lib/storage";
 import type { ArticlePost } from "./ArticleHeader";
 
@@ -23,7 +25,7 @@ export function ArticleContent({ post }: ArticleContentProps) {
 
       {/* Body Content */}
       <div className="text-base md:text-lg text-primary-text dark:text-gray-200 leading-relaxed whitespace-pre-wrap">
-        {post.body}
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.body}</ReactMarkdown>
       </div>
     </article>
   );
