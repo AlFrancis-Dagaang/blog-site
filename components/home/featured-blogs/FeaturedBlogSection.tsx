@@ -5,7 +5,7 @@ import { FeaturedBlogsSkeleton } from "./FeaturedBlogsSkeleton";
 
 const FEATURED_SLUGS = [
   "our-hackathon-journey-top-5",
-  "everything-is-an-object",
+  "my-journey-into-cloud-and-software-development",
 ];
 
 async function FeaturedBlogsContent() {
