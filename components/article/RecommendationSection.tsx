@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import { FeaturedArticleCard } from "@/components/blog/featured-carousel/FeaturedArticleCard";
-import { SITE_AUTHOR } from "@/lib/constants";
 import { getPostBySlug, getRecommendedPosts } from "@/lib/queries/posts";
 import { RecommendationSkeleton } from "./RecommendationSkeleton";
 
